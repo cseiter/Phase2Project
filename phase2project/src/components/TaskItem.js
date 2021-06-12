@@ -7,8 +7,8 @@ function TaskItem({ task }) {
     <li>
       <h4>Task {id}</h4>
       <h5>{name}</h5>
-      {image}
-      {template}
+      <br />{image}
+      <br />{template}
     </li>
   );
 }
