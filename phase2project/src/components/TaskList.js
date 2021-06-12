@@ -2,7 +2,7 @@ import React,{useEffect,useState} from "react";
 import TaskItem from "./TaskItem";
 
 function TaskList() {
-  const [tasks,setTasks] = useState(null);
+  const [tasks,setTasks] = useState([]);
   useEffect (() => {
     fetch("http://localhost:3000/tasks")
     .then((r) => r.json())
