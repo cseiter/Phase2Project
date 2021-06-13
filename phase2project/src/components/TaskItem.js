@@ -10,7 +10,7 @@ function TaskItem({ task,onDeleteTask }) {
   }
 
   function handleDeleteClick() {
-    fetch(`http://localhost:3000/tasks/${id}`, {
+    fetch(`https://phase2projectbackend.herokuapp.com/tasks${id}`, {
       method: "DELETE",
   })
   .then((r) => r.json())
