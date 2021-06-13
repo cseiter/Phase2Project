@@ -50,7 +50,7 @@ function TaskForm(props) {
             onChange={handleChange}
           />
         </label>
-        <button type="submit">Add Question</button>
+        <button type="submit">Add Task</button>
       </form>
     </section>
   );
