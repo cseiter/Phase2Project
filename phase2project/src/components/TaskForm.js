@@ -16,7 +16,18 @@ function TaskForm(props) {
 
   function handleSubmit(event) {
     event.preventDefault();
-    console.log(formData);
+    fetch("https://phase2projectbackend.herokuapp.com/tasks", {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify({
+        prompt: formData.prompt,
+        name: formData.name,
+        template: formData.template,
+        image: formData.image
+      }),
+    });
   }
 
   return (
