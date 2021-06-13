@@ -1,7 +1,7 @@
 import React,{useEffect,useState} from "react";
 import TaskItem from "./TaskItem";
 
-function TaskList() {
+function TaskList({onDeleteTask}) {
   const [tasks,setTasks] = useState([]);
   useEffect (() => {
     fetch("http://localhost:3000/tasks")
@@ -15,6 +15,7 @@ function TaskList() {
     <TaskItem
     key={t.id}
     task = {t}
+    onDeleteTask={onDeleteTask}
     />
   ));
 
