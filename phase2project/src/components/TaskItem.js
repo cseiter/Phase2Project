@@ -3,8 +3,10 @@ import React from "react";
 function TaskItem({ task }) {
   const { id, name, image, template } = task;
 
-  function selectTask() {
+  function selectTask(e) {
     console.log(`Task ${id}, ${name} selected`);
+    let target = e.currentTarget;
+    target.classList.toggle('selected')
   }
 
   return (
