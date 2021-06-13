@@ -4,7 +4,7 @@ import TaskItem from "./TaskItem";
 function TaskList({onDeleteTask}) {
   const [tasks,setTasks] = useState([]);
   useEffect (() => {
-    fetch("http://localhost:3000/tasks")
+    fetch("https://phase2projectbackend.herokuapp.com/tasks")
     .then((r) => r.json())
     .then((tasks) => {
       setTasks(tasks);
